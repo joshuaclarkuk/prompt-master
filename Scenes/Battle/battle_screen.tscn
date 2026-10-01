@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bpng2i6ch8725"]
+
+[ext_resource type="Script" uid="uid://cyh20m6tnfbcd" path="res://Scripts/Battle/battle_screen.gd" id="1_lgxt7"]
+[ext_resource type="PackedScene" uid="uid://dekiwn62vpetk" path="res://Scenes/Battle/battle_interface.tscn" id="2_ulvyu"]
+
+[node name="BattleScreen" type="Node2D" unique_id=518488640 node_paths=PackedStringArray("battle_interface_node")]
+script = ExtResource("1_lgxt7")
+battle_interface_node = NodePath("InterfaceCanvasLayer/BattleInterface")
+
+[node name="InterfaceCanvasLayer" type="CanvasLayer" parent="." unique_id=1498056198]
+
+[node name="BattleInterface" parent="InterfaceCanvasLayer" unique_id=323551590 instance=ExtResource("2_ulvyu")]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dtw50d1sd7tjn"]
+
+[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/PromptUIObjects/prompt_ui_object.tscn" id="1_ofhxq"]
+[ext_resource type="Texture2D" uid="uid://wbnyaqk7ue73" path="res://Assets/Sprites/Elements/Placeholders/basic-prompt.png" id="2_yjffn"]
+
+[node name="BasicPrompt" unique_id=1809580406 instance=ExtResource("1_ofhxq")]
+size_flags_horizontal = 3
+
+[node name="PromptTexture" parent="." index="0" unique_id=62275913]
+texture = ExtResource("2_yjffn")
+
+[node name="PromptTitle" parent="." index="1" unique_id=582598431]
+text = "Basic Prompt"
+
+[node name="PromptCost" parent="." index="2" unique_id=868168130]
+text = "80"

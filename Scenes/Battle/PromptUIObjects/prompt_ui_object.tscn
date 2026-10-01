@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://qr7qbhnk1jum"]
+
+[node name="PromptUIObject" type="HBoxContainer" unique_id=1809580406]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PromptTexture" type="TextureRect" parent="." unique_id=62275913]
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="PromptTitle" type="Label" parent="." unique_id=582598431]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PromptCost" type="Label" parent="." unique_id=868168130]
+layout_mode = 2
+size_flags_horizontal = 3

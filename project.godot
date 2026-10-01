@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Prompt Master"
+run/main_scene="uid://bpng2i6ch8725"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
