@@ -29,7 +29,8 @@ layout_mode = 2
 [node name="PromptTitle" type="Label" parent="HBoxContainer" unique_id=582598431]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
 
 [node name="PromptCost" type="Label" parent="HBoxContainer" unique_id=868168130]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 2

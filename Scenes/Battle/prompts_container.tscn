@@ -10,6 +10,20 @@
 script = ExtResource("1_fs0xc")
 prompt_ui_objects = [NodePath("BasicPrompt"), NodePath("OneShotPrompt"), NodePath("FewShotPrompt"), NodePath("RetrievalAugmentedGeneration")]
 
+[node name="TitleContainer" type="HBoxContainer" parent="." unique_id=2114449517]
+layout_mode = 2
+
+[node name="PromptTypeLabel" type="Label" parent="TitleContainer" unique_id=1779522538]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Prompt Type"
+
+[node name="CostLabel" type="Label" parent="TitleContainer" unique_id=1553843062]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cost"
+
 [node name="BasicPrompt" parent="." unique_id=1036205873 instance=ExtResource("2_cenhd")]
 layout_mode = 2
 
