@@ -1,20 +1,35 @@
 [gd_scene format=3 uid="uid://qr7qbhnk1jum"]
 
-[node name="PromptUIObject" type="HBoxContainer" unique_id=1809580406]
+[ext_resource type="Script" uid="uid://vsdbd6ldg1p5" path="res://Scripts/Battle/PromptUIObjects/prompt_ui_object.gd" id="1_qys44"]
+
+[node name="PromptUIObject" type="Button" unique_id=1036205873 node_paths=PackedStringArray("prompt_texture_node", "prompt_title_node", "prompt_cost_node")]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qys44")
+prompt_texture_node = NodePath("HBoxContainer/PromptTexture")
+prompt_title_node = NodePath("HBoxContainer/PromptTitle")
+prompt_cost_node = NodePath("HBoxContainer/PromptCost")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=233208411]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PromptTexture" type="TextureRect" parent="." unique_id=62275913]
+[node name="PromptTexture" type="TextureRect" parent="HBoxContainer" unique_id=62275913]
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 
-[node name="PromptTitle" type="Label" parent="." unique_id=582598431]
+[node name="PromptTitle" type="Label" parent="HBoxContainer" unique_id=582598431]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PromptCost" type="Label" parent="." unique_id=868168130]
+[node name="PromptCost" type="Label" parent="HBoxContainer" unique_id=868168130]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 10

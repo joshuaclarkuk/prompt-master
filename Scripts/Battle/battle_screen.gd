@@ -21,8 +21,17 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	generate_token(delta)	
+
+
+func generate_token(delta: float) -> void:
 	token_generation_timer += delta
 	if token_generation_timer >= time_to_generate_token:
 		player_tokens = mini(player_tokens + generated_tokens_to_add, player_max_tokens)
-		battle_interface_node.update_token_display(player_tokens)
+		update_battle_interface()
 		token_generation_timer = 0.0
+
+
+func update_battle_interface() -> void:
+	battle_interface_node.update_token_display(player_tokens)
+	

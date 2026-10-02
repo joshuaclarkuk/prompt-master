@@ -2,6 +2,7 @@ class_name BattleInterface extends Control
 
 @export var token_progress_bar_node: ProgressBar = null
 @export var token_count_label_node: Label = null
+@export var prompts_container_node: PromptsContainer = null
 
 
 func initialise_token_display(new_max_value: int) -> void:
@@ -9,6 +10,7 @@ func initialise_token_display(new_max_value: int) -> void:
 	token_count_label_node.text = str(0)
 
 
-func update_token_display(generated_tokens: int) -> void:
-	token_progress_bar_node.value = generated_tokens
-	token_count_label_node.text = str(generated_tokens)
+func update_token_display(player_tokens: int) -> void:
+	token_progress_bar_node.value = player_tokens
+	token_count_label_node.text = str(player_tokens)
+	prompts_container_node.update_prompts_display(player_tokens)

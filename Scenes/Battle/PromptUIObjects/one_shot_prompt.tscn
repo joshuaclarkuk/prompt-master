@@ -3,13 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/PromptUIObjects/prompt_ui_object.tscn" id="1_4fstb"]
 [ext_resource type="Texture2D" uid="uid://dw7nm76lxgxsm" path="res://Assets/Sprites/Elements/Placeholders/one-shot-prompt.png" id="2_5v2f7"]
 
-[node name="OneShotPrompt" unique_id=1809580406 instance=ExtResource("1_4fstb")]
+[node name="OneShotPrompt" unique_id=1036205873 instance=ExtResource("1_4fstb")]
+prompt_texture = ExtResource("2_5v2f7")
+prompt_title = "One-Shot Prompt"
+prompt_cost = 120
 
-[node name="PromptTexture" parent="." index="0" unique_id=62275913]
+[node name="PromptTexture" parent="HBoxContainer" parent_id_path=PackedInt32Array(233208411) index="0" unique_id=62275913]
 texture = ExtResource("2_5v2f7")
 
-[node name="PromptTitle" parent="." index="1" unique_id=582598431]
+[node name="PromptTitle" parent="HBoxContainer" parent_id_path=PackedInt32Array(233208411) index="1" unique_id=582598431]
 text = "One-Shot Prompt"
 
-[node name="PromptCost" parent="." index="2" unique_id=868168130]
+[node name="PromptCost" parent="HBoxContainer" parent_id_path=PackedInt32Array(233208411) index="2" unique_id=868168130]
 text = "120"

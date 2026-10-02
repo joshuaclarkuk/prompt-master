@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://gvhag7hx3gld"]
+
+[ext_resource type="Script" uid="uid://l3flb4p5mxc2" path="res://Scripts/Battle/prompts_container.gd" id="1_fs0xc"]
+[ext_resource type="PackedScene" uid="uid://dtw50d1sd7tjn" path="res://Scenes/Battle/PromptUIObjects/basic_prompt.tscn" id="2_cenhd"]
+[ext_resource type="PackedScene" uid="uid://04jauqv8rr6q" path="res://Scenes/Battle/PromptUIObjects/one_shot_prompt.tscn" id="3_i4j11"]
+[ext_resource type="PackedScene" uid="uid://0v2obj338e8t" path="res://Scenes/Battle/PromptUIObjects/few_shot_prompt.tscn" id="4_6m8ch"]
+[ext_resource type="PackedScene" uid="uid://dpfm552oykd0h" path="res://Scenes/Battle/PromptUIObjects/retrieval_augmented_generation.tscn" id="5_nw5ll"]
+
+[node name="PromptsContainer" type="VBoxContainer" unique_id=253197136 node_paths=PackedStringArray("prompt_ui_objects")]
+script = ExtResource("1_fs0xc")
+prompt_ui_objects = [NodePath("BasicPrompt"), NodePath("OneShotPrompt"), NodePath("FewShotPrompt"), NodePath("RetrievalAugmentedGeneration")]
+
+[node name="BasicPrompt" parent="." unique_id=1036205873 instance=ExtResource("2_cenhd")]
+layout_mode = 2
+
+[node name="OneShotPrompt" parent="." unique_id=244036849 instance=ExtResource("3_i4j11")]
+layout_mode = 2
+
+[node name="FewShotPrompt" parent="." unique_id=1203028172 instance=ExtResource("4_6m8ch")]
+layout_mode = 2
+
+[node name="RetrievalAugmentedGeneration" parent="." unique_id=638758553 instance=ExtResource("5_nw5ll")]
+layout_mode = 2
