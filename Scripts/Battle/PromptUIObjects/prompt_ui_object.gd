@@ -5,10 +5,8 @@ class_name PromptUIObject extends Button
 @export var prompt_title_node: Label = null
 @export var prompt_cost_node: Label = null
 
-@export_category("Prompt Values")
-@export var prompt_texture: Texture2D = null
-@export var prompt_title: String = ""
-@export var prompt_cost: int = 0
+@export_category("Prompt Type Resource")
+@export var prompt_type: PromptType = null
 
 @export_category("Activation Colours")
 @export var active_colour: Color = Color.WHITE
@@ -18,9 +16,9 @@ var is_active: bool = true
 
 
 func _ready() -> void:
-	prompt_texture_node.texture = prompt_texture
-	prompt_title_node.text = prompt_title
-	prompt_cost_node.text = str(prompt_cost)
+	prompt_texture_node.texture = prompt_type.prompt_texture
+	prompt_title_node.text = prompt_type.prompt_title
+	prompt_cost_node.text = str(prompt_type.prompt_cost)
 	deactivate()
 
 
@@ -45,4 +43,4 @@ func deactivate() -> void:
 
 
 func get_prompt_cost() -> int:
-	return prompt_cost
+	return prompt_type.prompt_cost

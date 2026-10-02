@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://gvhag7hx3gld"]
 
 [ext_resource type="Script" uid="uid://l3flb4p5mxc2" path="res://Scripts/Battle/prompts_container.gd" id="1_fs0xc"]
-[ext_resource type="PackedScene" uid="uid://dtw50d1sd7tjn" path="res://Scenes/Battle/PromptUIObjects/basic_prompt.tscn" id="2_cenhd"]
-[ext_resource type="PackedScene" uid="uid://04jauqv8rr6q" path="res://Scenes/Battle/PromptUIObjects/one_shot_prompt.tscn" id="3_i4j11"]
-[ext_resource type="PackedScene" uid="uid://0v2obj338e8t" path="res://Scenes/Battle/PromptUIObjects/few_shot_prompt.tscn" id="4_6m8ch"]
-[ext_resource type="PackedScene" uid="uid://dpfm552oykd0h" path="res://Scenes/Battle/PromptUIObjects/retrieval_augmented_generation.tscn" id="5_nw5ll"]
+[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/prompt_ui_object.tscn" id="2_cenhd"]
+[ext_resource type="Resource" uid="uid://yuathedwci7k" path="res://Resources/PromptTypes/basic_prompt.tres" id="3_i4j11"]
+[ext_resource type="Resource" uid="uid://bjdbrgpsakwsh" path="res://Resources/PromptTypes/one-shot-prompt.tres" id="4_6m8ch"]
+[ext_resource type="Resource" uid="uid://dewrdrdahqblf" path="res://Resources/PromptTypes/few-shot-prompt.tres" id="5_nw5ll"]
+[ext_resource type="Resource" uid="uid://cag6s65w7jbha" path="res://Resources/PromptTypes/retrieval-augmented-generation.tres" id="6_vyn37"]
 
 [node name="PromptsContainer" type="VBoxContainer" unique_id=253197136 node_paths=PackedStringArray("prompt_ui_objects")]
 script = ExtResource("1_fs0xc")
-prompt_ui_objects = [NodePath("BasicPrompt"), NodePath("OneShotPrompt"), NodePath("FewShotPrompt"), NodePath("RetrievalAugmentedGeneration")]
+prompt_ui_objects = [NodePath("AttackBasicPrompt"), NodePath("AttackOneShotPrompt"), NodePath("AttackFewShotPrompt"), NodePath("AttackRetrievalAugmentedGeneration")]
 
 [node name="TitleContainer" type="HBoxContainer" parent="." unique_id=2114449517]
 layout_mode = 2
@@ -24,14 +25,18 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Cost"
 
-[node name="BasicPrompt" parent="." unique_id=1036205873 instance=ExtResource("2_cenhd")]
+[node name="AttackBasicPrompt" parent="." unique_id=1036205873 instance=ExtResource("2_cenhd")]
 layout_mode = 2
+prompt_type = ExtResource("3_i4j11")
 
-[node name="OneShotPrompt" parent="." unique_id=244036849 instance=ExtResource("3_i4j11")]
+[node name="AttackOneShotPrompt" parent="." unique_id=1214160735 instance=ExtResource("2_cenhd")]
 layout_mode = 2
+prompt_type = ExtResource("4_6m8ch")
 
-[node name="FewShotPrompt" parent="." unique_id=1203028172 instance=ExtResource("4_6m8ch")]
+[node name="AttackFewShotPrompt" parent="." unique_id=65675003 instance=ExtResource("2_cenhd")]
 layout_mode = 2
+prompt_type = ExtResource("5_nw5ll")
 
-[node name="RetrievalAugmentedGeneration" parent="." unique_id=638758553 instance=ExtResource("5_nw5ll")]
+[node name="AttackRetrievalAugmentedGeneration" parent="." unique_id=222077383 instance=ExtResource("2_cenhd")]
 layout_mode = 2
+prompt_type = ExtResource("6_vyn37")
