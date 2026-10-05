@@ -8,11 +8,11 @@ func _ready() -> void:
 
 func handle_fade_to_black() -> void:
 	modulate.a = 0.0
-	var fade_tween = create_tween()
+	var fade_tween: Tween = create_tween()
 	fade_tween.tween_property(self, "modulate", Color(1, 1, 1, 1), 1.0).set_trans(Tween.TRANS_SINE)
 
 
 func handle_fade_from_black() -> void:
 	modulate.a = 1.0
-	var fade_tween = create_tween()
+	var fade_tween: Tween = create_tween()
 	fade_tween.tween_property(self, "modulate", Color(1, 1, 1, 0), 1.0).set_trans(Tween.TRANS_SINE)

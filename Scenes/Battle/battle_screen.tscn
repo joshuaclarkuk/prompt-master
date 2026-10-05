@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bpng2i6ch8725"]
 
 [ext_resource type="Script" uid="uid://cyh20m6tnfbcd" path="res://Scripts/Battle/battle_manager.gd" id="1_lgxt7"]
-[ext_resource type="Script" uid="uid://bqjftsch4sam5" path="res://Scripts/Battle/Sequences/battle_intro_sequence.gd" id="2_7ekd4"]
+[ext_resource type="PackedScene" uid="uid://b08d0pcc67hdo" path="res://Scenes/Battle/battle_intro_sequence.tscn" id="2_4qpdc"]
 [ext_resource type="Texture2D" uid="uid://depvit2n2qqyc" path="res://Assets/Sprites/Backgrounds/battle-city-background.png" id="2_om0vh"]
 [ext_resource type="PackedScene" uid="uid://dekiwn62vpetk" path="res://Scenes/Battle/battle_interface.tscn" id="2_ulvyu"]
 [ext_resource type="Texture2D" uid="uid://d1hi36stpw5xm" path="res://Assets/Sprites/Characters/Battle/battle-player.png" id="3_44cri"]
 [ext_resource type="Texture2D" uid="uid://cs136nfnv4hqu" path="res://Assets/Sprites/Characters/Battle/battle-enemy.png" id="4_hppjy"]
 [ext_resource type="PackedScene" uid="uid://b6wxwk5qw8gp5" path="res://Scenes/Utilities/fade_screen.tscn" id="7_4qpdc"]
+[ext_resource type="AudioStream" uid="uid://cr5xjsi1sqjof" path="res://Assets/Audio/battle-music-tata-150bpm.ogg" id="8_4qpdc"]
 
 [sub_resource type="Gradient" id="Gradient_44cri"]
 colors = PackedColorArray(0.41568628, 0.44313726, 0.5568628, 1, 0.3294955, 0.35380846, 0.45579535, 1)
@@ -18,12 +19,219 @@ height = 400
 fill_from = Vector2(0.49590164, 0.29143897)
 fill_to = Vector2(0.5081967, 1)
 
+[sub_resource type="Animation" id="Animation_7ekd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(194, 511)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EnemySprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(936, 299)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EnemySprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InterfaceCanvasLayer/BattleInterface:offset_transform_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("InterfaceCanvasLayer/BattleInterface:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_j7x01"]
+resource_name = "display_battle_interface"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InterfaceCanvasLayer/BattleInterface:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20336005, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 300), Vector2(0, -20), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InterfaceCanvasLayer/BattleInterface:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_lcabr"]
+resource_name = "enemy_enter_battle"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemySprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20620868, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1284, 299), Vector2(924, 299), Vector2(936, 299)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemySprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667, 0.20778279),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerSprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_4qpdc"]
+resource_name = "player_enter_battle"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333335, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-212, 511), Vector2(210, 511), Vector2(194, 511)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.2345427),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerSprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lcabr"]
+_data = {
+&"RESET": SubResource("Animation_7ekd4"),
+&"display_battle_interface": SubResource("Animation_j7x01"),
+&"enemy_enter_battle": SubResource("Animation_lcabr"),
+&"player_enter_battle": SubResource("Animation_4qpdc")
+}
+
 [node name="BattleScreen" type="Node2D" unique_id=518488640 node_paths=PackedStringArray("battle_interface_node")]
 script = ExtResource("1_lgxt7")
 battle_interface_node = NodePath("InterfaceCanvasLayer/BattleInterface")
 
-[node name="BattleIntroSequence" type="Node" parent="." unique_id=1344173477]
-script = ExtResource("2_7ekd4")
+[node name="BattleIntroSequence" parent="." unique_id=1288920025 node_paths=PackedStringArray("player_sprite_node", "enemy_sprite_node", "battle_interface_node", "animation_player_node", "battle_music_node") instance=ExtResource("2_4qpdc")]
+player_sprite_node = NodePath("../PlayerSprite")
+enemy_sprite_node = NodePath("../EnemySprite")
+battle_interface_node = NodePath("../InterfaceCanvasLayer/BattleInterface")
+animation_player_node = NodePath("../AnimationPlayer")
+battle_music_node = NodePath("../BattleMusic")
 
 [node name="BackgroundBaseSprite" type="Sprite2D" parent="." unique_id=288764007]
 position = Vector2(637, 556)
@@ -35,6 +243,7 @@ scale = Vector2(1.18, 1.18)
 texture = ExtResource("2_om0vh")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1802032832]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(194, 511)
 texture = ExtResource("3_44cri")
 
@@ -47,8 +256,17 @@ flip_h = true
 [node name="InterfaceCanvasLayer" type="CanvasLayer" parent="." unique_id=1498056198]
 
 [node name="BattleInterface" parent="InterfaceCanvasLayer" unique_id=323551590 instance=ExtResource("2_ulvyu")]
+offset_transform_enabled = true
 
 [node name="FadeScreenLayer" type="CanvasLayer" parent="." unique_id=1106806159]
 layer = 10
+visible = false
 
 [node name="FadeScreen" parent="FadeScreenLayer" unique_id=1483793472 instance=ExtResource("7_4qpdc")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=847749867]
+libraries/ = SubResource("AnimationLibrary_lcabr")
+
+[node name="BattleMusic" type="AudioStreamPlayer" parent="." unique_id=1892213544]
+stream = ExtResource("8_4qpdc")
+bus = &"Music"
