@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b6wxwk5qw8gp5"]
+
+[ext_resource type="Script" uid="uid://6sxpjtmpidx1" path="res://Scripts/Utilities/fade_screen.gd" id="1_xboqp"]
+
+[sub_resource type="Gradient" id="Gradient_hppjy"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wx4q6"]
+gradient = SubResource("Gradient_hppjy")
+width = 1920
+height = 1080
+
+[node name="FadeScreen" type="TextureRect" unique_id=1483793472]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -892.0
+offset_top = -547.0
+offset_right = 1028.0
+offset_bottom = 533.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_wx4q6")
+script = ExtResource("1_xboqp")

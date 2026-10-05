@@ -4,3 +4,11 @@ class_name BattleIntroSequence extends Node
 @export var player_sprite_node: Sprite2D = null
 @export var enemy_sprite_node: Sprite2D = null
 @export var battle_interface_node: Control = null
+
+
+func _ready() -> void:
+    call_deferred("emit_fade_from_black")
+
+
+func emit_fade_from_black() -> void:
+    EventBus.on_fade_from_black.emit()
