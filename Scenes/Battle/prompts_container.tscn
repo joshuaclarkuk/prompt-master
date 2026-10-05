@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://cag6s65w7jbha" path="res://Resources/PromptTypes/retrieval-augmented-generation.tres" id="6_vyn37"]
 
 [node name="PromptsContainer" type="VBoxContainer" unique_id=253197136 node_paths=PackedStringArray("prompt_ui_objects")]
+theme_override_constants/separation = 4
 script = ExtResource("1_fs0xc")
 prompt_ui_objects = [NodePath("AttackBasicPrompt"), NodePath("AttackOneShotPrompt"), NodePath("AttackFewShotPrompt"), NodePath("AttackRetrievalAugmentedGeneration")]
 

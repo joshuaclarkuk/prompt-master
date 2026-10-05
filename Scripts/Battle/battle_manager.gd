@@ -14,6 +14,8 @@ var enemy_tokens: int = 0
 
 var token_generation_timer: float = 0.0
 
+var is_battle_active: bool = false
+
 
 func _ready() -> void:
 	battle_interface_node.on_prompt_pressed.connect(handle_prompt_pressed)
@@ -23,7 +25,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	generate_token(delta)	
+	if is_battle_active:
+		generate_token(delta)	
 
 
 func generate_token(delta: float) -> void:
