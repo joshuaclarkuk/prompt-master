@@ -1,6 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://byn6gak6e0bgk"]
 
+[ext_resource type="FontFile" uid="uid://caiblodym1lgt" path="res://Assets/Fonts/pixellari/Pixellari.ttf" id="1_arij2"]
+
 [resource]
+default_font = ExtResource("1_arij2")
 MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
