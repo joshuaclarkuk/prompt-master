@@ -105,6 +105,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("EnemySprite:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_j7x01"]
 resource_name = "display_battle_interface"
@@ -164,11 +176,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PlayerSprite:visible")
+tracks/2/path = NodePath("EnemySprite:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.033333335),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -260,7 +272,6 @@ offset_transform_enabled = true
 
 [node name="FadeScreenLayer" type="CanvasLayer" parent="." unique_id=1106806159]
 layer = 10
-visible = false
 
 [node name="FadeScreen" parent="FadeScreenLayer" unique_id=1483793472 instance=ExtResource("7_4qpdc")]
 
@@ -269,4 +280,5 @@ libraries/ = SubResource("AnimationLibrary_lcabr")
 
 [node name="BattleMusic" type="AudioStreamPlayer" parent="." unique_id=1892213544]
 stream = ExtResource("8_4qpdc")
+volume_db = -18.0
 bus = &"Music"
