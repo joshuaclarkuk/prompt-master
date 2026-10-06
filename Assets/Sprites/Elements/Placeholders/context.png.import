@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw7nm76lxgxsm"
-path="res://.godot/imported/one-shot-prompt.png-f492aa0ceb1ffacb7fee0e89cd27f46d.ctex"
+uid="uid://dhplu6a534t76"
+path="res://.godot/imported/context.png-133e31117c9ebe8d8cadb14c0206a2b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Elements/Placeholders/one-shot-prompt.png"
-dest_files=["res://.godot/imported/one-shot-prompt.png-f492aa0ceb1ffacb7fee0e89cd27f46d.ctex"]
+source_file="res://Assets/Sprites/Elements/Placeholders/context.png"
+dest_files=["res://.godot/imported/context.png-133e31117c9ebe8d8cadb14c0206a2b0.ctex"]
 
 [params]
 

@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="PromptType" format=3 uid="uid://yuathedwci7k"]
+[gd_resource type="Resource" script_class="ComponentResBase" format=3 uid="uid://c41b4ldpdauaa"]
 
-[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_em5eo"]
-[ext_resource type="Texture2D" uid="uid://wbnyaqk7ue73" path="res://Assets/Sprites/Elements/Placeholders/basic-prompt.png" id="1_qofsm"]
+[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_8q150"]
+[ext_resource type="Texture2D" uid="uid://wbnyaqk7ue73" path="res://Assets/Sprites/Elements/Placeholders/task.png" id="1_vmc23"]
 
 [resource]
-script = ExtResource("1_em5eo")
-prompt_type = 1
-prompt_texture = ExtResource("1_qofsm")
-prompt_title = "Basic Prompt"
-prompt_cost = 80
+script = ExtResource("1_8q150")
+component_texture = ExtResource("1_vmc23")
+component_title = "Task"
+component_cost = 1
 metadata/_custom_type_script = "uid://cw61m8h55p18s"

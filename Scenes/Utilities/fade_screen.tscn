@@ -20,5 +20,6 @@ offset_right = 1028.0
 offset_bottom = 533.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("GradientTexture2D_wx4q6")
 script = ExtResource("1_xboqp")

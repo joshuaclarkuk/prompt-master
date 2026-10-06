@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhplu6a534t76"
-path="res://.godot/imported/tree-of-thoughts.png-cb7e6c92c2e8d21101c07a3f4b2db0ef.ctex"
+uid="uid://doqopcwon2ruo"
+path="res://.godot/imported/constraints.png-5f3d711247003dcd17d027b288e2c773.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Elements/Placeholders/tree-of-thoughts.png"
-dest_files=["res://.godot/imported/tree-of-thoughts.png-cb7e6c92c2e8d21101c07a3f4b2db0ef.ctex"]
+source_file="res://Assets/Sprites/Elements/Placeholders/constraints.png"
+dest_files=["res://.godot/imported/constraints.png-5f3d711247003dcd17d027b288e2c773.ctex"]
 
 [params]
 

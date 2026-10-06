@@ -1,7 +1,12 @@
-[gd_resource type="Resource" script_class="ComponentType" format=3 uid="uid://b5wmlos7atmq2"]
+[gd_resource type="Resource" script_class="ComponentResBase" format=3 uid="uid://bdqsk1prqp1pq"]
 
-[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_287e3"]
+[ext_resource type="Texture2D" uid="uid://dw7nm76lxgxsm" path="res://Assets/Sprites/Elements/Placeholders/format.png" id="1_n4d2u"]
+[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_ovwii"]
 
 [resource]
-script = ExtResource("1_287e3")
+script = ExtResource("1_ovwii")
+component_type = 4
+component_texture = ExtResource("1_n4d2u")
+component_title = "Format"
+component_cost = 1
 metadata/_custom_type_script = "uid://cw61m8h55p18s"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doqopcwon2ruo"
-path="res://.godot/imported/chain-of-thought.png-3bdf27b6cfde657f6faa7cb2ac72289c.ctex"
+uid="uid://byajspo3b2cu3"
+path="res://.godot/imported/super.png-ae18dc4f9af1a7997a54605490fa5e46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Elements/Placeholders/chain-of-thought.png"
-dest_files=["res://.godot/imported/chain-of-thought.png-3bdf27b6cfde657f6faa7cb2ac72289c.ctex"]
+source_file="res://Assets/Sprites/Elements/Placeholders/super.png"
+dest_files=["res://.godot/imported/super.png-ae18dc4f9af1a7997a54605490fa5e46.ctex"]
 
 [params]
 

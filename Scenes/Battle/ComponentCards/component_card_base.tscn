@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://qr7qbhnk1jum"]
+
+[ext_resource type="Script" uid="uid://cj6ko8o7je6ww" path="res://Scripts/Battle/ComponentCards/component_card-base.gd" id="1_bjtw8"]
+
+[node name="ComponentCardBase" type="Button" unique_id=1036205873 node_paths=PackedStringArray("component_texture_node", "component_title_node", "component_cost_node")]
+custom_minimum_size = Vector2(100, 140)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+script = ExtResource("1_bjtw8")
+component_texture_node = NodePath("MarginContainer/VBoxContainer/ComponentTexture")
+component_title_node = NodePath("MarginContainer/VBoxContainer/ComponentTitle")
+component_cost_node = NodePath("MarginContainer/VBoxContainer/ComponentCost")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=349515535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=990553633]
+layout_mode = 2
+
+[node name="ComponentTexture" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=62275913]
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+
+[node name="ComponentTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=582598431]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 4.0
+
+[node name="ComponentCost" type="Label" parent="MarginContainer/VBoxContainer" unique_id=868168130]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6

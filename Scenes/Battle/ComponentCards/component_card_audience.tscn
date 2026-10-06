@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bjvmfo4t57s27"]
 
-[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/ComponentCards/component-card-base.tscn" id="1_os2cv"]
+[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/ComponentCards/component_card_base.tscn" id="1_os2cv"]
+[ext_resource type="Resource" uid="uid://c4maku7nkwnb" path="res://Resources/ComponentTypes/component_res_audience.tres" id="2_v5wxi"]
 
 [node name="ComponentCardAudience" unique_id=1036205873 instance=ExtResource("1_os2cv")]
+component_type = ExtResource("2_v5wxi")

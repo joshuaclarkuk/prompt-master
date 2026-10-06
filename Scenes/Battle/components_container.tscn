@@ -1,26 +1,30 @@
 [gd_scene format=3 uid="uid://gvhag7hx3gld"]
 
 [ext_resource type="Script" uid="uid://dv7c1bdygsifs" path="res://Scripts/Battle/components_container.gd" id="1_bcymg"]
+[ext_resource type="PackedScene" uid="uid://d3lq5ybbsnegu" path="res://Scenes/Battle/ComponentCards/component_card_task.tscn" id="2_alk7a"]
+[ext_resource type="PackedScene" uid="uid://bjvmfo4t57s27" path="res://Scenes/Battle/ComponentCards/component_card_audience.tscn" id="3_yh5k8"]
+[ext_resource type="PackedScene" uid="uid://budfhp4opq0r6" path="res://Scenes/Battle/ComponentCards/component_card_context.tscn" id="4_bnq0h"]
+[ext_resource type="PackedScene" uid="uid://cy80vmqt8qsmp" path="res://Scenes/Battle/ComponentCards/component_card_constraints.tscn" id="5_6oug3"]
+[ext_resource type="PackedScene" uid="uid://bmmh48sgnkbcg" path="res://Scenes/Battle/ComponentCards/component_card_format.tscn" id="6_bsrrj"]
 
-[node name="ComponentContainer" type="VBoxContainer" unique_id=253197136]
-offset_right = 178.0
+[node name="ComponentContainer" type="HBoxContainer" unique_id=697650357 node_paths=PackedStringArray("component_cards")]
+offset_right = 516.0
 offset_bottom = 159.0
 theme_override_constants/separation = 4
 script = ExtResource("1_bcymg")
+component_cards = [NodePath("ComponentCardTask"), NodePath("ComponentCardAudience"), NodePath("ComponentCardContext"), NodePath("ComponentCardConstraints"), NodePath("ComponentCardFormat")]
 
-[node name="TitleContainer" type="HBoxContainer" parent="." unique_id=2114449517]
+[node name="ComponentCardTask" parent="." unique_id=1036205873 instance=ExtResource("2_alk7a")]
 layout_mode = 2
 
-[node name="ComponentLabel" type="Label" parent="TitleContainer" unique_id=1779522538]
+[node name="ComponentCardAudience" parent="." unique_id=139234003 instance=ExtResource("3_yh5k8")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 4.0
-text = "Component"
 
-[node name="CostLabel" type="Label" parent="TitleContainer" unique_id=1553843062]
+[node name="ComponentCardContext" parent="." unique_id=1724911753 instance=ExtResource("4_bnq0h")]
 layout_mode = 2
-size_flags_horizontal = 3
-text = "Cost"
 
-[node name="ComponentCardContainer" type="HBoxContainer" parent="." unique_id=900354333]
+[node name="ComponentCardConstraints" parent="." unique_id=1001520036 instance=ExtResource("5_6oug3")]
+layout_mode = 2
+
+[node name="ComponentCardFormat" parent="." unique_id=1756861396 instance=ExtResource("6_bsrrj")]
 layout_mode = 2

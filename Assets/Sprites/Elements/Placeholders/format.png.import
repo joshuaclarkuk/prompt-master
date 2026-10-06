@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wbnyaqk7ue73"
-path="res://.godot/imported/basic-prompt.png-aa1e19f6fe853edc08ae74802480946b.ctex"
+uid="uid://dw7nm76lxgxsm"
+path="res://.godot/imported/format.png-40a7ac227599096e2203364a96f7d6a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Elements/Placeholders/basic-prompt.png"
-dest_files=["res://.godot/imported/basic-prompt.png-aa1e19f6fe853edc08ae74802480946b.ctex"]
+source_file="res://Assets/Sprites/Elements/Placeholders/format.png"
+dest_files=["res://.godot/imported/format.png-40a7ac227599096e2203364a96f7d6a0.ctex"]
 
 [params]
 

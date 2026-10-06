@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="PromptType" format=3 uid="uid://bjdbrgpsakwsh"]
+[gd_resource type="Resource" script_class="ComponentResBase" format=3 uid="uid://cobefvepo1sds"]
 
-[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_v8ceo"]
-[ext_resource type="Texture2D" uid="uid://dw7nm76lxgxsm" path="res://Assets/Sprites/Elements/Placeholders/one-shot-prompt.png" id="1_vs44b"]
+[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_n5qs5"]
+[ext_resource type="Texture2D" uid="uid://dhplu6a534t76" path="res://Assets/Sprites/Elements/Placeholders/context.png" id="1_qxlca"]
 
 [resource]
-script = ExtResource("1_v8ceo")
-prompt_type = 2
-prompt_texture = ExtResource("1_vs44b")
-prompt_title = "One-Shot Prompt"
-prompt_cost = 120
+script = ExtResource("1_n5qs5")
+component_type = 2
+component_texture = ExtResource("1_qxlca")
+component_title = "Context"
+component_cost = 1
 metadata/_custom_type_script = "uid://cw61m8h55p18s"

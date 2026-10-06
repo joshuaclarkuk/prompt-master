@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dpv7ss75hwnk7" path="res://Scripts/Battle/battle_interface.gd" id="1_tdan1"]
 [ext_resource type="PackedScene" uid="uid://gvhag7hx3gld" path="res://Scenes/Battle/components_container.tscn" id="3_bwf4j"]
 
-[node name="BattleInterface" type="Control" unique_id=323551590 node_paths=PackedStringArray("token_progress_bar_node", "token_count_label_node", "prompts_container_node")]
+[node name="BattleInterface" type="Control" unique_id=323551590 node_paths=PackedStringArray("player_token_count_label_node", "components_container_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,9 +15,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_akol5")
 script = ExtResource("1_tdan1")
-token_progress_bar_node = NodePath("MarginContainer/ActionPanel/TokenPanel/MarginContainer/TokenCounterContainer/TokenProgressBar")
-token_count_label_node = NodePath("MarginContainer/ActionPanel/TokenPanel/MarginContainer/TokenCounterContainer/TokenProgressBar/TokenCountLabel")
-prompts_container_node = NodePath("MarginContainer/ActionPanel/AttackPanel/MarginContainer/PromptsContainer")
+player_token_count_label_node = NodePath("MarginContainer/ActionPanel/TokenPanel/MarginContainer/TokenCounterContainer/PlayerTokenCount")
+components_container_node = NodePath("MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1134595528]
 layout_mode = 1
@@ -67,7 +66,7 @@ size_flags_horizontal = 3
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ActionPanel/TokenPanel" unique_id=129738371]
 layout_mode = 2
 
-[node name="TokenCounterContainer" type="HBoxContainer" parent="MarginContainer/ActionPanel/TokenPanel/MarginContainer" unique_id=1544501916]
+[node name="TokenCounterContainer" type="VBoxContainer" parent="MarginContainer/ActionPanel/TokenPanel/MarginContainer" unique_id=1767933190]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -75,35 +74,19 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Player Tokens: "
 
-[node name="TokenProgressBar" type="ProgressBar" parent="MarginContainer/ActionPanel/TokenPanel/MarginContainer/TokenCounterContainer" unique_id=1681039980]
-custom_minimum_size = Vector2(0, 20)
+[node name="PlayerTokenCount" type="Label" parent="MarginContainer/ActionPanel/TokenPanel/MarginContainer/TokenCounterContainer" unique_id=1141785241]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-show_percentage = false
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "0"
 
-[node name="TokenCountLabel" type="Label" parent="MarginContainer/ActionPanel/TokenPanel/MarginContainer/TokenCounterContainer/TokenProgressBar" unique_id=193332137]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "100"
-
-[node name="AttackPanel" type="PanelContainer" parent="MarginContainer/ActionPanel" unique_id=2099326842]
+[node name="ComponentPanel" type="PanelContainer" parent="MarginContainer/ActionPanel" unique_id=2099326842]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ActionPanel/AttackPanel" unique_id=138107159]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ActionPanel/ComponentPanel" unique_id=138107159]
 layout_mode = 2
 
-[node name="PromptsContainer" parent="MarginContainer/ActionPanel/AttackPanel/MarginContainer" unique_id=253197136 instance=ExtResource("3_bwf4j")]
+[node name="ComponentContainer" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer" unique_id=697650357 instance=ExtResource("3_bwf4j")]
 layout_mode = 2
