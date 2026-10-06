@@ -21,10 +21,14 @@ func _ready() -> void:
 
 func handle_pressed() -> void:
 	is_selected = !is_selected
+
 	if is_selected:
 		offset_transform_position = Vector2(0, -40)
+		EventBus.on_component_pressed.emit(component_type, is_selected)
 	else:
 		offset_transform_position = Vector2.ZERO
+		EventBus.on_component_pressed.emit(component_type, is_selected)
+
 	print("%s: is_selected: %s" % [name, is_selected])
 
 

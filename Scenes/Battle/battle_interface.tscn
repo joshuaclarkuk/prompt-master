@@ -2,10 +2,14 @@
 
 [ext_resource type="Theme" uid="uid://byn6gak6e0bgk" path="res://Themes/battle_screen_theme.tres" id="1_akol5"]
 [ext_resource type="Script" uid="uid://dpv7ss75hwnk7" path="res://Scripts/Battle/battle_interface.gd" id="1_tdan1"]
-[ext_resource type="PackedScene" uid="uid://gvhag7hx3gld" path="res://Scenes/Battle/components_container.tscn" id="3_bwf4j"]
+[ext_resource type="PackedScene" uid="uid://d3lq5ybbsnegu" path="res://Scenes/Battle/ComponentCards/component_card_task.tscn" id="4_a0kw7"]
 [ext_resource type="PackedScene" uid="uid://dckiyroxbkaux" path="res://Scenes/Battle/HealthTokenUI/health_token_ui.tscn" id="4_wmgjr"]
+[ext_resource type="PackedScene" uid="uid://bjvmfo4t57s27" path="res://Scenes/Battle/ComponentCards/component_card_audience.tscn" id="5_7beuc"]
+[ext_resource type="PackedScene" uid="uid://budfhp4opq0r6" path="res://Scenes/Battle/ComponentCards/component_card_context.tscn" id="6_8n443"]
+[ext_resource type="PackedScene" uid="uid://cy80vmqt8qsmp" path="res://Scenes/Battle/ComponentCards/component_card_constraints.tscn" id="7_jw5kn"]
+[ext_resource type="PackedScene" uid="uid://bmmh48sgnkbcg" path="res://Scenes/Battle/ComponentCards/component_card_format.tscn" id="8_3803e"]
 
-[node name="BattleInterface" type="Control" unique_id=323551590 node_paths=PackedStringArray("health_token_ui_node", "components_container_node")]
+[node name="BattleInterface" type="Control" unique_id=323551590 node_paths=PackedStringArray("health_token_ui_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +21,6 @@ size_flags_vertical = 3
 theme = ExtResource("1_akol5")
 script = ExtResource("1_tdan1")
 health_token_ui_node = NodePath("MarginContainer/HealthTokenUI")
-components_container_node = NodePath("MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1134595528]
 layout_mode = 1
@@ -26,6 +29,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HealthTokenUI" parent="MarginContainer" unique_id=1141000439 instance=ExtResource("4_wmgjr")]
+layout_mode = 2
+size_flags_vertical = 0
 
 [node name="ActionPanel" type="HBoxContainer" parent="MarginContainer" unique_id=1989509924]
 layout_mode = 2
@@ -62,9 +69,21 @@ size_flags_stretch_ratio = 2.0
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ActionPanel/ComponentPanel" unique_id=138107159]
 layout_mode = 2
 
-[node name="ComponentContainer" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer" unique_id=697650357 instance=ExtResource("3_bwf4j")]
+[node name="ComponentContainer" type="HBoxContainer" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer" unique_id=697650357]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ComponentCardTask" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer" unique_id=1036205873 instance=ExtResource("4_a0kw7")]
 layout_mode = 2
 
-[node name="HealthTokenUI" parent="MarginContainer" unique_id=1141000439 instance=ExtResource("4_wmgjr")]
+[node name="ComponentCardAudience" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer" unique_id=139234003 instance=ExtResource("5_7beuc")]
 layout_mode = 2
-size_flags_vertical = 0
+
+[node name="ComponentCardContext" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer" unique_id=1724911753 instance=ExtResource("6_8n443")]
+layout_mode = 2
+
+[node name="ComponentCardConstraints" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer" unique_id=1001520036 instance=ExtResource("7_jw5kn")]
+layout_mode = 2
+
+[node name="ComponentCardFormat" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer/ComponentContainer" unique_id=1756861396 instance=ExtResource("8_3803e")]
+layout_mode = 2
