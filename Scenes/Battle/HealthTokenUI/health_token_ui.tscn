@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dckiyroxbkaux"]
+
+[ext_resource type="Script" uid="uid://byn6g228dkalg" path="res://Scripts/Battle/HealthTokenUI/health_token_ui.gd" id="1_wsd2y"]
+[ext_resource type="PackedScene" uid="uid://be8i60hntr3mf" path="res://Scenes/Battle/HealthTokenUI/stability_bar_player.tscn" id="2_cwkfw"]
+[ext_resource type="PackedScene" uid="uid://bp8ijb83x81l3" path="res://Scenes/Battle/HealthTokenUI/stability_bar_enemy.tscn" id="3_b6ly5"]
+
+[node name="HealthTokenUI" type="HBoxContainer" unique_id=1141000439 node_paths=PackedStringArray("player_token_count_node")]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_constants/separation = 80
+script = ExtResource("1_wsd2y")
+player_token_count_node = NodePath("TokenCounterContainer/PlayerTokenCount")
+
+[node name="StabilityBarPlayer" parent="." unique_id=1983824704 instance=ExtResource("2_cwkfw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TokenCounterContainer" type="VBoxContainer" parent="." unique_id=719767677]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerTokenLabel" type="Label" parent="TokenCounterContainer" unique_id=1750159370]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Player Tokens: "
+
+[node name="PlayerTokenCount" type="Label" parent="TokenCounterContainer" unique_id=1563145608]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "0"
+
+[node name="StabilityBarEnemy" parent="." unique_id=1006488880 instance=ExtResource("3_b6ly5")]
+layout_mode = 2
+size_flags_horizontal = 3

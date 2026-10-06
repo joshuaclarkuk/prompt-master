@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp8ijb83x81l3"]
 
-[ext_resource type="PackedScene" uid="uid://c2ehpp2pltdon" path="res://Scenes/Battle/StabilityBars/stability_bar_base.tscn" id="1_3oesb"]
+[ext_resource type="PackedScene" uid="uid://c2ehpp2pltdon" path="res://Scenes/Battle/HealthTokenUI/stability_bar_base.tscn" id="1_3oesb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3i33"]
 bg_color = Color(0.2686335, 1.8049032e-07, 7.219613e-08, 1)

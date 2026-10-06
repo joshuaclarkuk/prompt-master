@@ -1,9 +1,11 @@
 class_name BattleInterface extends Control
 
-@export var player_token_count_label_node: Label = null
+signal on_componet_pressed(component_type: ComponentResBase)
+
+@export var health_token_ui_node: HealthTokenUI = null
 @export var components_container_node: ComponentsContainer = null
 
-signal on_componet_pressed(component_type: ComponentResBase)
+var player_token_count_label_node: Label = null
 
 
 func _ready() -> void:
@@ -11,7 +13,7 @@ func _ready() -> void:
 
 
 func update_token_display(player_tokens: int) -> void:
-	player_token_count_label_node.text = str(player_tokens)
+	health_token_ui_node.get_player_token_count_node().text = str(player_tokens)
 
 
 func handle_component_pressed(prompt_type: ComponentResBase) -> void:

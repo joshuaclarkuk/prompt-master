@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2ehpp2pltdon"]
 
-[ext_resource type="Script" uid="uid://bdef46jbg7qsr" path="res://Scripts/Battle/StabilityBars/stability_bar_base.gd" id="1_x3i33"]
+[ext_resource type="Script" uid="uid://bdef46jbg7qsr" path="res://Scripts/Battle/HealthTokenUI/stability_bar_base.gd" id="1_x3i33"]
 
 [node name="StabilityBar" type="VBoxContainer" unique_id=1983824704 node_paths=PackedStringArray("progress_bar_node")]
 anchors_preset = 15

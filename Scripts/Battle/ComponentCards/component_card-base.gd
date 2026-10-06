@@ -22,7 +22,7 @@ func _ready() -> void:
 func handle_pressed() -> void:
 	is_selected = !is_selected
 	if is_selected:
-		offset_transform_position = Vector2(0, -20)
+		offset_transform_position = Vector2(0, -40)
 	else:
 		offset_transform_position = Vector2.ZERO
 	print("%s: is_selected: %s" % [name, is_selected])
