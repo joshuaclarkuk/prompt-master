@@ -11,7 +11,7 @@ offset_bottom = 31.0
 grow_horizontal = 2
 theme_override_constants/separation = 80
 script = ExtResource("1_wsd2y")
-player_token_count_node = NodePath("TokenCounterContainer/PlayerTokenCount")
+player_token_count_node = NodePath("TokenCounterContainer/PlayerTokenCountPanel/PlayerTokenCount")
 
 [node name="StabilityBarPlayer" parent="." unique_id=1983824704 instance=ExtResource("2_cwkfw")]
 layout_mode = 2
@@ -26,10 +26,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Player Tokens: "
 
-[node name="PlayerTokenCount" type="Label" parent="TokenCounterContainer" unique_id=1563145608]
+[node name="PlayerTokenCountPanel" type="PanelContainer" parent="TokenCounterContainer" unique_id=187946945]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PlayerTokenCount" type="Label" parent="TokenCounterContainer/PlayerTokenCountPanel" unique_id=1563145608]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme_override_font_sizes/font_size = 44
 text = "0"
 
 [node name="StabilityBarEnemy" parent="." unique_id=1006488880 instance=ExtResource("3_b6ly5")]
