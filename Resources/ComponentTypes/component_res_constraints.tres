@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PromptType" format=3 uid="uid://cag6s65w7jbha"]
 
 [ext_resource type="Texture2D" uid="uid://c8mq28tcx5nkr" path="res://Assets/Sprites/Elements/Placeholders/retrieval-augmented-generation.png" id="1_ht6fd"]
-[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/prompt-type.gd" id="1_x2dwa"]
+[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_x2dwa"]
 
 [resource]
 script = ExtResource("1_x2dwa")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://gvhag7hx3gld"]
+
+[ext_resource type="Script" uid="uid://dv7c1bdygsifs" path="res://Scripts/Battle/components_container.gd" id="1_bcymg"]
+
+[node name="ComponentContainer" type="VBoxContainer" unique_id=253197136]
+offset_right = 178.0
+offset_bottom = 159.0
+theme_override_constants/separation = 4
+script = ExtResource("1_bcymg")
+
+[node name="TitleContainer" type="HBoxContainer" parent="." unique_id=2114449517]
+layout_mode = 2
+
+[node name="ComponentLabel" type="Label" parent="TitleContainer" unique_id=1779522538]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Component"
+
+[node name="CostLabel" type="Label" parent="TitleContainer" unique_id=1553843062]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cost"
+
+[node name="ComponentCardContainer" type="HBoxContainer" parent="." unique_id=900354333]
+layout_mode = 2

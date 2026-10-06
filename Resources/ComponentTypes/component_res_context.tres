@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PromptType" format=3 uid="uid://bjdbrgpsakwsh"]
 
-[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/prompt-type.gd" id="1_v8ceo"]
+[ext_resource type="Script" uid="uid://cw61m8h55p18s" path="res://Resources/component_res_base.gd" id="1_v8ceo"]
 [ext_resource type="Texture2D" uid="uid://dw7nm76lxgxsm" path="res://Assets/Sprites/Elements/Placeholders/one-shot-prompt.png" id="1_vs44b"]
 
 [resource]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://byn6gak6e0bgk" path="res://Themes/battle_screen_theme.tres" id="1_akol5"]
 [ext_resource type="Script" uid="uid://dpv7ss75hwnk7" path="res://Scripts/Battle/battle_interface.gd" id="1_tdan1"]
-[ext_resource type="PackedScene" uid="uid://gvhag7hx3gld" path="res://Scenes/Battle/prompts_container.tscn" id="3_bwf4j"]
+[ext_resource type="PackedScene" uid="uid://gvhag7hx3gld" path="res://Scenes/Battle/components_container.tscn" id="3_bwf4j"]
 
 [node name="BattleInterface" type="Control" unique_id=323551590 node_paths=PackedStringArray("token_progress_bar_node", "token_count_label_node", "prompts_container_node")]
 layout_mode = 3

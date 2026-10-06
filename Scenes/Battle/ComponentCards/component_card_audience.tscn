@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bjvmfo4t57s27"]
+
+[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/ComponentCards/component-card-base.tscn" id="1_os2cv"]
+
+[node name="ComponentCardAudience" unique_id=1036205873 instance=ExtResource("1_os2cv")]
