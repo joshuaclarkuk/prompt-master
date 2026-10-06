@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c2ehpp2pltdon"]
+
+[ext_resource type="Script" uid="uid://bdef46jbg7qsr" path="res://Scripts/Battle/StabilityBars/stability_bar_base.gd" id="1_x3i33"]
+
+[node name="StabilityBar" type="VBoxContainer" unique_id=1983824704 node_paths=PackedStringArray("progress_bar_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x3i33")
+progress_bar_node = NodePath("ProgressBar")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2043769402]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="StabilityTitle" type="Label" parent="." unique_id=1629912636]
+layout_mode = 2

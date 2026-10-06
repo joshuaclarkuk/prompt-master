@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://byn6gak6e0bgk" path="res://Themes/battle_screen_theme.tres" id="1_akol5"]
 [ext_resource type="Script" uid="uid://dpv7ss75hwnk7" path="res://Scripts/Battle/battle_interface.gd" id="1_tdan1"]
 [ext_resource type="PackedScene" uid="uid://gvhag7hx3gld" path="res://Scenes/Battle/components_container.tscn" id="3_bwf4j"]
+[ext_resource type="PackedScene" uid="uid://dckiyroxbkaux" path="res://Scenes/Battle/StabilityBars/stability_bars.tscn" id="4_wmgjr"]
 
 [node name="BattleInterface" type="Control" unique_id=323551590 node_paths=PackedStringArray("player_token_count_label_node", "components_container_node")]
 layout_mode = 3
@@ -89,4 +90,7 @@ size_flags_stretch_ratio = 2.0
 layout_mode = 2
 
 [node name="ComponentContainer" parent="MarginContainer/ActionPanel/ComponentPanel/MarginContainer" unique_id=697650357 instance=ExtResource("3_bwf4j")]
+layout_mode = 2
+
+[node name="StabilityBars" parent="MarginContainer" unique_id=1141000439 instance=ExtResource("4_wmgjr")]
 layout_mode = 2

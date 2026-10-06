@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bp8ijb83x81l3"]
+
+[ext_resource type="PackedScene" uid="uid://c2ehpp2pltdon" path="res://Scenes/Battle/StabilityBars/stability_bar_base.tscn" id="1_3oesb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3i33"]
+bg_color = Color(0.2686335, 1.8049032e-07, 7.219613e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3oesb"]
+bg_color = Color(0.9333266, 3.272891e-06, 9.62615e-07, 1)
+
+[node name="StabilityBarEnemy" unique_id=1983824704 instance=ExtResource("1_3oesb")]
+
+[node name="ProgressBar" parent="." index="0" unique_id=2043769402]
+theme_override_styles/background = SubResource("StyleBoxFlat_x3i33")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3oesb")
+
+[node name="StabilityTitle" parent="." index="1" unique_id=1629912636]
+text = "Enemy Stability"
