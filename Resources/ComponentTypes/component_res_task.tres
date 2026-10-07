@@ -7,5 +7,4 @@
 script = ExtResource("1_8q150")
 component_texture = ExtResource("1_vmc23")
 component_title = "Task"
-component_cost = 1
 metadata/_custom_type_script = "uid://cw61m8h55p18s"
