@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy80vmqt8qsmp"]
 
-[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/ComponentCards/component_card_base.tscn" id="1_kff4b"]
+[ext_resource type="PackedScene" uid="uid://qr7qbhnk1jum" path="res://Scenes/Battle/ComponentBattleSystem/ComponentCards/component_card_base.tscn" id="1_kff4b"]
 [ext_resource type="Resource" uid="uid://b2g444th0ekhj" path="res://Resources/ComponentTypes/component_res_constraints.tres" id="2_m7cil"]
 
 [node name="ComponentCardConstraints" unique_id=1036205873 instance=ExtResource("1_kff4b")]

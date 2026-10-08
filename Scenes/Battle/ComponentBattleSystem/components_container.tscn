@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://gvhag7hx3gld"]
 
 [ext_resource type="Script" uid="uid://dv7c1bdygsifs" path="res://Scripts/Battle/components_container.gd" id="1_bcymg"]
-[ext_resource type="PackedScene" uid="uid://d3lq5ybbsnegu" path="res://Scenes/Battle/ComponentCards/component_card_task.tscn" id="2_alk7a"]
-[ext_resource type="PackedScene" uid="uid://bjvmfo4t57s27" path="res://Scenes/Battle/ComponentCards/component_card_audience.tscn" id="3_yh5k8"]
-[ext_resource type="PackedScene" uid="uid://budfhp4opq0r6" path="res://Scenes/Battle/ComponentCards/component_card_context.tscn" id="4_bnq0h"]
-[ext_resource type="PackedScene" uid="uid://cy80vmqt8qsmp" path="res://Scenes/Battle/ComponentCards/component_card_constraints.tscn" id="5_6oug3"]
-[ext_resource type="PackedScene" uid="uid://bmmh48sgnkbcg" path="res://Scenes/Battle/ComponentCards/component_card_format.tscn" id="6_bsrrj"]
+[ext_resource type="PackedScene" uid="uid://d3lq5ybbsnegu" path="res://Scenes/Battle/ComponentBattleSystem/ComponentCards/component_card_task.tscn" id="2_alk7a"]
+[ext_resource type="PackedScene" uid="uid://bjvmfo4t57s27" path="res://Scenes/Battle/ComponentBattleSystem/ComponentCards/component_card_audience.tscn" id="3_yh5k8"]
+[ext_resource type="PackedScene" uid="uid://budfhp4opq0r6" path="res://Scenes/Battle/ComponentBattleSystem/ComponentCards/component_card_context.tscn" id="4_bnq0h"]
+[ext_resource type="PackedScene" uid="uid://cy80vmqt8qsmp" path="res://Scenes/Battle/ComponentBattleSystem/ComponentCards/component_card_constraints.tscn" id="5_6oug3"]
+[ext_resource type="PackedScene" uid="uid://bmmh48sgnkbcg" path="res://Scenes/Battle/ComponentBattleSystem/ComponentCards/component_card_format.tscn" id="6_bsrrj"]
 
 [node name="ComponentContainer" type="HBoxContainer" unique_id=697650357 node_paths=PackedStringArray("component_cards")]
 offset_right = 516.0

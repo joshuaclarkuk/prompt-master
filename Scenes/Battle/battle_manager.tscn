@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://bpng2i6ch8725"]
 
-[ext_resource type="Script" uid="uid://cyh20m6tnfbcd" path="res://Scripts/Battle/battle_manager.gd" id="1_lgxt7"]
-[ext_resource type="PackedScene" uid="uid://b08d0pcc67hdo" path="res://Scenes/Battle/battle_intro_sequence.tscn" id="2_4qpdc"]
-[ext_resource type="Texture2D" uid="uid://depvit2n2qqyc" path="res://Assets/Sprites/Backgrounds/battle-city-background.png" id="2_om0vh"]
-[ext_resource type="PackedScene" uid="uid://dekiwn62vpetk" path="res://Scenes/Battle/battle_interface.tscn" id="2_ulvyu"]
-[ext_resource type="Texture2D" uid="uid://d1hi36stpw5xm" path="res://Assets/Sprites/Characters/Battle/battle-player.png" id="3_44cri"]
-[ext_resource type="Texture2D" uid="uid://cs136nfnv4hqu" path="res://Assets/Sprites/Characters/Battle/battle-enemy.png" id="4_hppjy"]
-[ext_resource type="PackedScene" uid="uid://b6wxwk5qw8gp5" path="res://Scenes/Utilities/fade_screen.tscn" id="7_4qpdc"]
-[ext_resource type="PackedScene" uid="uid://b8rre3rilcaf2" path="res://Scenes/Battle/enemy_appeared_banner.tscn" id="7_lcabr"]
-[ext_resource type="AudioStream" uid="uid://cr5xjsi1sqjof" path="res://Assets/Audio/battle-music-tata-150bpm.ogg" id="8_4qpdc"]
+[ext_resource type="Script" uid="uid://cyh20m6tnfbcd" path="res://Scripts/Battle/battle_manager.gd" id="1_fjqb4"]
+[ext_resource type="PackedScene" uid="uid://b08d0pcc67hdo" path="res://Scenes/Battle/battle_intro_sequence.tscn" id="2_y70mg"]
+[ext_resource type="Texture2D" uid="uid://depvit2n2qqyc" path="res://Assets/Sprites/Backgrounds/battle-city-background.png" id="3_gthe3"]
+[ext_resource type="Texture2D" uid="uid://d1hi36stpw5xm" path="res://Assets/Sprites/Characters/Battle/battle-player.png" id="4_upibi"]
+[ext_resource type="Texture2D" uid="uid://cs136nfnv4hqu" path="res://Assets/Sprites/Characters/Battle/battle-enemy.png" id="5_1mqxb"]
+[ext_resource type="PackedScene" uid="uid://dekiwn62vpetk" path="res://Scenes/Battle/battle_interface.tscn" id="6_dvmbt"]
+[ext_resource type="PackedScene" uid="uid://b6wxwk5qw8gp5" path="res://Scenes/Utilities/fade_screen.tscn" id="8_rd1hx"]
+[ext_resource type="AudioStream" uid="uid://cr5xjsi1sqjof" path="res://Assets/Audio/battle-music-tata-150bpm.ogg" id="9_1o7tm"]
 
 [sub_resource type="Gradient" id="Gradient_44cri"]
 colors = PackedColorArray(0.41568628, 0.44313726, 0.5568628, 1, 0.3294955, 0.35380846, 0.45579535, 1)
@@ -235,11 +234,11 @@ _data = {
 &"player_enter_battle": SubResource("Animation_4qpdc")
 }
 
-[node name="BattleScreen" type="Node2D" unique_id=518488640 node_paths=PackedStringArray("battle_interface_node")]
-script = ExtResource("1_lgxt7")
+[node name="BattleManager" type="Node2D" unique_id=518488640 node_paths=PackedStringArray("battle_interface_node")]
+script = ExtResource("1_fjqb4")
 battle_interface_node = NodePath("UICanvasLayer/BattleInterface")
 
-[node name="BattleIntroSequence" parent="." unique_id=1288920025 node_paths=PackedStringArray("player_sprite_node", "enemy_sprite_node", "battle_interface_node", "animation_player_node", "battle_music_node") instance=ExtResource("2_4qpdc")]
+[node name="BattleIntroSequence" parent="." unique_id=1288920025 node_paths=PackedStringArray("player_sprite_node", "enemy_sprite_node", "battle_interface_node", "animation_player_node", "battle_music_node") instance=ExtResource("2_y70mg")]
 player_sprite_node = NodePath("../PlayerSprite")
 enemy_sprite_node = NodePath("../EnemySprite")
 battle_interface_node = NodePath("../UICanvasLayer/BattleInterface")
@@ -253,36 +252,34 @@ texture = SubResource("GradientTexture2D_tllul")
 [node name="BackgroundCitySprite" type="Sprite2D" parent="." unique_id=1582720424]
 position = Vector2(658, -72)
 scale = Vector2(1.18, 1.18)
-texture = ExtResource("2_om0vh")
+texture = ExtResource("3_gthe3")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1802032832]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(194, 511)
-texture = ExtResource("3_44cri")
+texture = ExtResource("4_upibi")
 
 [node name="EnemySprite" type="Sprite2D" parent="." unique_id=1107723895]
 position = Vector2(936, 299)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("4_hppjy")
+texture = ExtResource("5_1mqxb")
 flip_h = true
 
 [node name="UICanvasLayer" type="CanvasLayer" parent="." unique_id=1498056198]
 
-[node name="BattleInterface" parent="UICanvasLayer" unique_id=323551590 instance=ExtResource("2_ulvyu")]
+[node name="BattleInterface" parent="UICanvasLayer" unique_id=323551590 instance=ExtResource("6_dvmbt")]
 offset_transform_enabled = true
-
-[node name="EnemyAppearedBanner" parent="UICanvasLayer" unique_id=1213518429 instance=ExtResource("7_lcabr")]
 
 [node name="FadeScreenLayer" type="CanvasLayer" parent="." unique_id=1106806159]
 layer = 10
 
-[node name="FadeScreen" parent="FadeScreenLayer" unique_id=1483793472 instance=ExtResource("7_4qpdc")]
+[node name="FadeScreen" parent="FadeScreenLayer" unique_id=1483793472 instance=ExtResource("8_rd1hx")]
 visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=847749867]
 libraries/ = SubResource("AnimationLibrary_lcabr")
 
 [node name="BattleMusic" type="AudioStreamPlayer" parent="." unique_id=1892213544]
-stream = ExtResource("8_4qpdc")
+stream = ExtResource("9_1o7tm")
 volume_db = -18.0
 bus = &"Music"
