@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://jelnbbxawvs"]
 
 [ext_resource type="Texture2D" uid="uid://dmv5vv0qbkn54" path="res://Assets/Sprites/Characters/Town/player-spritesheet-no-background.png" id="1_dvv2c"]
+[ext_resource type="Script" uid="uid://djhcrvwx56ons" path="res://Scripts/Characters/Player/player.gd" id="1_upj3l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dvv2c"]
 atlas = ExtResource("1_dvv2c")
@@ -9,18 +10,6 @@ region = Rect2(1, 133, 281, 434)
 [sub_resource type="AtlasTexture" id="AtlasTexture_r8kk4"]
 atlas = ExtResource("1_dvv2c")
 region = Rect2(282, 133, 281, 434)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8t4b"]
-atlas = ExtResource("1_dvv2c")
-region = Rect2(563, 133, 281, 434)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pkiec"]
-atlas = ExtResource("1_dvv2c")
-region = Rect2(844, 133, 281, 434)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mc66k"]
-atlas = ExtResource("1_dvv2c")
-region = Rect2(1125, 133, 281, 434)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hcw3"]
 animations = [{
@@ -35,15 +24,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r8kk4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x8t4b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pkiec")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mc66k")
 }],
 "loop": 1,
 "name": &"run",
@@ -52,15 +32,19 @@ animations = [{
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0hcw3"]
 
-[node name="TownPlayer" type="CharacterBody3D" unique_id=694068819]
+[node name="Player" type="CharacterBody3D" unique_id=694068819]
+script = ExtResource("1_upj3l")
 
 [node name="Sprite" type="AnimatedSprite3D" parent="." unique_id=589056580]
 transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_0hcw3")
-animation = &"idle"
+animation = &"run"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=940690380]
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=940690380]
 shape = SubResource("CapsuleShape3D_0hcw3")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1462484325]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+[node name="CameraPivot" type="Node3D" parent="." unique_id=401942575]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
+
+[node name="Camera" type="Camera3D" parent="CameraPivot" unique_id=1462484325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)

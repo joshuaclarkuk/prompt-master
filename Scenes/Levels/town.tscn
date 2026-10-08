@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvoumqgu03kp1"]
 
 [ext_resource type="Material" uid="uid://c2re8ly2jbvx0" path="res://Materials/Prototype/town_floor_grey.tres" id="1_5htkb"]
-[ext_resource type="PackedScene" uid="uid://jelnbbxawvs" path="res://Scenes/Characters/Town/Player/town_player.tscn" id="2_xlcn8"]
+[ext_resource type="PackedScene" uid="uid://jelnbbxawvs" path="res://Scenes/Characters/Town/Player/player.tscn" id="2_xlcn8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_epssq"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,5 +29,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 material_override = ExtResource("1_5htkb")
 size = Vector3(16, 1, 16)
 
-[node name="TownPlayer" parent="." unique_id=694068819 instance=ExtResource("2_xlcn8")]
+[node name="Player" parent="." unique_id=694068819 instance=ExtResource("2_xlcn8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
