@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bvoumqgu03kp1"]
+
+[ext_resource type="Material" uid="uid://c2re8ly2jbvx0" path="res://Materials/Prototype/town_floor_grey.tres" id="1_5htkb"]
+[ext_resource type="PackedScene" uid="uid://jelnbbxawvs" path="res://Scenes/Characters/Town/Player/town_player.tscn" id="2_xlcn8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_epssq"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_oychf"]
+sky_material = SubResource("ProceduralSkyMaterial_epssq")
+
+[sub_resource type="Environment" id="Environment_av160"]
+background_mode = 2
+sky = SubResource("Sky_oychf")
+glow_enabled = true
+
+[node name="Town" type="Node3D" unique_id=83206698]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=998804741]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1151324702]
+environment = SubResource("Environment_av160")
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1277527412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("1_5htkb")
+size = Vector3(16, 1, 16)
+
+[node name="TownPlayer" parent="." unique_id=694068819 instance=ExtResource("2_xlcn8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
