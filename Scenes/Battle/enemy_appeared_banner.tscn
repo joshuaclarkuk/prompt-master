@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b8rre3rilcaf2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnf77"]
+bg_color = Color(0.9297146, 0.9297147, 0.9297146, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1121t"]
+bg_color = Color(0.11119691, 0.11119681, 0.11119693, 1)
+
+[node name="EnemyAppearedBanner" type="PanelContainer" unique_id=1213518429]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fnf77")
+
+[node name="Border" type="Panel" parent="." unique_id=1831083281]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_1121t")
+
+[node name="EnemyTypeLabel" type="Label" parent="Border" unique_id=1471146648]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -11.5
+offset_right = 146.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "An [ENEMY TYPE] prompter appeared!"

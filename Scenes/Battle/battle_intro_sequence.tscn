@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bqjftsch4sam5" path="res://Scripts/Battle/Sequences/battle_intro_sequence.gd" id="1_kjl6n"]
 
-[node name="BattleIntroSequence" type="Node" unique_id=1288920025 node_paths=PackedStringArray("appear_timer_node")]
+[node name="BattleIntroSequence" type="Node" unique_id=1288920025 node_paths=PackedStringArray("battle_intro_sequence_timer_node")]
 script = ExtResource("1_kjl6n")
-appear_timer_node = NodePath("BattleIntroSequenceTimer")
+battle_intro_sequence_timer_node = NodePath("BattleIntroSequenceTimer")
 
 [node name="BattleIntroSequenceTimer" type="Timer" parent="." unique_id=1054283038]
 wait_time = 0.3
