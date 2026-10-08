@@ -2,6 +2,7 @@
 
 [ext_resource type="Material" uid="uid://c2re8ly2jbvx0" path="res://Materials/Prototype/town_floor_grey.tres" id="1_5htkb"]
 [ext_resource type="PackedScene" uid="uid://jelnbbxawvs" path="res://Scenes/Characters/Town/Player/player.tscn" id="2_xlcn8"]
+[ext_resource type="PackedScene" uid="uid://cr0mmk1e4im0s" path="res://Scenes/Buildings/liver_building.tscn" id="3_epssq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_epssq"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,4 +31,6 @@ material_override = ExtResource("1_5htkb")
 size = Vector3(16, 1, 16)
 
 [node name="Player" parent="." unique_id=694068819 instance=ExtResource("2_xlcn8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="LiverBuilding" parent="." unique_id=1041526310 instance=ExtResource("3_epssq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)

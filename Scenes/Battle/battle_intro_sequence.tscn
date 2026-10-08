@@ -4,8 +4,8 @@
 
 [node name="BattleIntroSequence" type="Node" unique_id=1288920025 node_paths=PackedStringArray("appear_timer_node")]
 script = ExtResource("1_kjl6n")
-appear_timer_node = NodePath("AppearTimer")
+appear_timer_node = NodePath("BattleIntroSequenceTimer")
 
-[node name="AppearTimer" type="Timer" parent="." unique_id=1054283038]
+[node name="BattleIntroSequenceTimer" type="Timer" parent="." unique_id=1054283038]
 wait_time = 0.3
 one_shot = true

@@ -32,19 +32,21 @@ animations = [{
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0hcw3"]
 
-[node name="Player" type="CharacterBody3D" unique_id=694068819]
+[node name="Player" type="CharacterBody3D" unique_id=694068819 node_paths=PackedStringArray("sprite_node")]
 script = ExtResource("1_upj3l")
+sprite_node = NodePath("Sprite")
 
 [node name="Sprite" type="AnimatedSprite3D" parent="." unique_id=589056580]
-transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, 0, 0, 0)
+transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, 0, 1, 0)
 sprite_frames = SubResource("SpriteFrames_0hcw3")
-animation = &"run"
+animation = &"idle"
 
 [node name="Collider" type="CollisionShape3D" parent="." unique_id=940690380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_0hcw3")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=401942575]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 1, 0)
 
 [node name="Camera" type="Camera3D" parent="CameraPivot" unique_id=1462484325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cr0mmk1e4im0s"]
+
+[ext_resource type="Texture2D" uid="uid://br43n404xg6g7" path="res://Assets/Sprites/Buildings/liver_building.png" id="1_q614u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_upj3l"]
+size = Vector3(10, 7, 2)
+
+[node name="LiverBuilding" type="StaticBody3D" unique_id=1041526310]
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=145900490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+shape = SubResource("BoxShape3D_upj3l")
+
+[node name="Sprite" type="Sprite3D" parent="." unique_id=506097851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+texture = ExtResource("1_q614u")

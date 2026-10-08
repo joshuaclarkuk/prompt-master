@@ -84,7 +84,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("InterfaceCanvasLayer/BattleInterface:visible")
+tracks/5/path = NodePath("UICanvasLayer/BattleInterface:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -96,7 +96,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("InterfaceCanvasLayer/BattleInterface:offset_transform_position")
+tracks/6/path = NodePath("UICanvasLayer/BattleInterface:offset_transform_position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -124,7 +124,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("InterfaceCanvasLayer/BattleInterface:visible")
+tracks/0/path = NodePath("UICanvasLayer/BattleInterface:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -136,7 +136,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("InterfaceCanvasLayer/BattleInterface:offset_transform_position")
+tracks/1/path = NodePath("UICanvasLayer/BattleInterface:offset_transform_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -236,12 +236,12 @@ _data = {
 
 [node name="BattleScreen" type="Node2D" unique_id=518488640 node_paths=PackedStringArray("battle_interface_node")]
 script = ExtResource("1_lgxt7")
-battle_interface_node = NodePath("InterfaceCanvasLayer/BattleInterface")
+battle_interface_node = NodePath("UICanvasLayer/BattleInterface")
 
 [node name="BattleIntroSequence" parent="." unique_id=1288920025 node_paths=PackedStringArray("player_sprite_node", "enemy_sprite_node", "battle_interface_node", "animation_player_node", "battle_music_node") instance=ExtResource("2_4qpdc")]
 player_sprite_node = NodePath("../PlayerSprite")
 enemy_sprite_node = NodePath("../EnemySprite")
-battle_interface_node = NodePath("../InterfaceCanvasLayer/BattleInterface")
+battle_interface_node = NodePath("../UICanvasLayer/BattleInterface")
 animation_player_node = NodePath("../AnimationPlayer")
 battle_music_node = NodePath("../BattleMusic")
 
@@ -265,9 +265,9 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_hppjy")
 flip_h = true
 
-[node name="InterfaceCanvasLayer" type="CanvasLayer" parent="." unique_id=1498056198]
+[node name="UICanvasLayer" type="CanvasLayer" parent="." unique_id=1498056198]
 
-[node name="BattleInterface" parent="InterfaceCanvasLayer" unique_id=323551590 instance=ExtResource("2_ulvyu")]
+[node name="BattleInterface" parent="UICanvasLayer" unique_id=323551590 instance=ExtResource("2_ulvyu")]
 offset_transform_enabled = true
 
 [node name="FadeScreenLayer" type="CanvasLayer" parent="." unique_id=1106806159]

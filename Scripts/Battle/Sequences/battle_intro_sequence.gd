@@ -6,13 +6,13 @@ class_name BattleIntroSequence extends Node
 @export var battle_interface_node: Control = null
 @export var animation_player_node: AnimationPlayer = null
 @export var battle_music_node: AudioStreamPlayer = null
-@export var appear_timer_node: Timer = null
+@export var battle_intro_sequence_timer_node: Timer = null
 
-var appear_timer_index: int = 0
+var battle_intro_sequence_timer_index: int = 0
 
 
 func _ready() -> void:
-	appear_timer_node.timeout.connect(handle_appear_timer_timeout)
+	battle_intro_sequence_timer_node.timeout.connect(handle_appear_timer_timeout)
 
 	player_sprite_node.visible = false
 	enemy_sprite_node.visible = false
@@ -24,22 +24,22 @@ func _ready() -> void:
 func start_battle_intro_sequence() -> void:
 	EventBus.on_fade_from_black.emit()
 	battle_music_node.play()
-	appear_timer_node.start()
+	battle_intro_sequence_timer_node.start()
 
 
 func handle_appear_timer_timeout() -> void:
-	match appear_timer_index:
+	match battle_intro_sequence_timer_index:
 		0:
-			print("%s: displaying player" % [name])
+			# Enter player
 			animation_player_node.play("player_enter_battle")
-			appear_timer_index += 1
-			appear_timer_node.start()            
+			battle_intro_sequence_timer_index += 1
+			battle_intro_sequence_timer_node.start()            
 		1:
-			print("%s: displaying enemy" % [name])
+			# Enter enemy
 			animation_player_node.play("enemy_enter_battle")
-			appear_timer_index += 1
-			appear_timer_node.start()
+			battle_intro_sequence_timer_index += 1
+			battle_intro_sequence_timer_node.start()
 		2:
-			print("%s: displaying battle interface" % [name])
+			# Show battle interface
 			animation_player_node.play("display_battle_interface")
-			appear_timer_index += 1
+			battle_intro_sequence_timer_index += 1
